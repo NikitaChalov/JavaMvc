@@ -11,7 +11,8 @@ public class SenderImpl implements Sender {
     }
 
     @Override
-    public String getMessage(String message) {
+    public String sendMessage(String message) {
         return receiver.getMessage("Wired data transmission" + message);
     }
+
 }
