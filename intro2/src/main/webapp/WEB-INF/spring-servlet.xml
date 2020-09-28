@@ -10,8 +10,4 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <bean id = "receiver" class = "org.chalov.intro2.implementation.ReceiverImpl"/>
-    <bean id = "sender" class = "org.chalov.intro2.implementation.SenderImpl">
-        <constructor-arg name = "receiver" ref = "receiver"/>
-    </bean>
 </beans>

@@ -1,23 +1,19 @@
 package org.chalov.intro2.Controllers;
 
-import org.chalov.intro2.implementation.ReceiverImpl;
-import org.chalov.intro2.implementation.SenderImpl;
-import org.chalov.intro2.implementation.WirelessSenderImpl;
-import org.chalov.intro2.interfaces.Receiver;
+import org.chalov.intro2.confings.JavaConfig;
 import org.chalov.intro2.interfaces.Sender;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
-    @Autowired
-    private org.springframework.web.context.WebApplicationContext context;
+    private org.springframework.context.annotation.AnnotationConfigApplicationContext context;
 
     @RequestMapping(value= "/")
     public String home() {
+        context = new AnnotationConfigApplicationContext(JavaConfig.class);
         Sender sender = context.getBean("sender", Sender.class);
-        return sender.sendMessage("My message");
+        return sender.sendMessage(" Message from java config");
     }
 }
