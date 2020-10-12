@@ -1,8 +1,8 @@
-package org.chalov.intro2.confings;
+package org.chalov.intro2.implementation;
 
 import org.springframework.context.annotation.ComponentScan;
 
-    @ComponentScan("org.chalov.intro2")
+    @ComponentScan("org.chalov.intro2.implementation")
     public class JavaConfig {
 
     }

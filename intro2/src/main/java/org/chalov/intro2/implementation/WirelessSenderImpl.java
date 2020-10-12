@@ -10,7 +10,7 @@ public class WirelessSenderImpl implements Sender {
     private final Receiver receiver;
 
     @Autowired
-    public WirelessSenderImpl(Receiver receiver) {
+    public WirelessSenderImpl (Receiver receiver) {
         this.receiver = receiver;
     }
 
