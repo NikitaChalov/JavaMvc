@@ -1,8 +1,8 @@
 <html>
 <head>
-    <title>Title</title>
+    <title>Hello</title>
 </head>
 <body>
-<p>${msg}</p>
+<p>!Hello!</p>
 </body>
 </html>
